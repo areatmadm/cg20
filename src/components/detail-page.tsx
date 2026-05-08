@@ -384,7 +384,7 @@ export function DetailPage({
                 <div className="flex-1 overflow-y-auto">
                   {activeTab === 'intro' && (
                     <>
-                      <p className="text-sm leading-6 text-white/72">{game.summary ?? game.description ?? '게임 소개 정보가 없습니다.'}</p>
+                      <p className="text-sm leading-6 text-white/72">{game.summary ?? '게임 소개 정보가 없습니다.'}</p>
                       <div className="mt-4 flex flex-wrap gap-2">
                         {(game.tags ?? []).map((tag) => <span key={tag} className="pill">#{tag}</span>)}
                       </div>

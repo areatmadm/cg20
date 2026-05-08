@@ -40,9 +40,11 @@ function RoutedPage() {
   if (predictParams) {
     const numId = Number(predictParams.id);
     const game = games.find((g) => g.steamAppId === numId)
-      ?? { steamAppId: numId, title: `Game #${numId}`, genre: [], tags: [], score: 0,
-           discountRate: 0, prices: { kr: '-', us: '-', jp: '-' }, priceKRW: 0,
-           description: '', platform: [], playtime: 0 };
+      ?? { steamAppId: numId, title: `Game #${numId}`, slug: '', genre: [], tags: [],
+           platforms: [], score: 0, discountRate: 0, prices: { kr: '-', us: '-', jp: '-' },
+           priceKRW: 0, originalKRW: 0, reviewLabel: '', reason: [], playtime: '0',
+           updateStatus: '', streamStatus: '', predictedSale: [], similar: [], news: [],
+           summary: '' };
     return <AppShell><PredictPage game={game} /></AppShell>;
   }
 
