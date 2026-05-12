@@ -163,7 +163,7 @@ function TabPrediction({ gameId }: { gameId: number }) {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/game/${gameId}/discount-prediction`)
+    fetch(`${API_BASE}/game/${gameId}/discount-prediction`)
       .then((r) => { if (!r.ok) throw new Error(); return r.json(); })
       .then(setData)
       .catch(() => setError('할인 예측 데이터를 불러오지 못했습니다.'))
